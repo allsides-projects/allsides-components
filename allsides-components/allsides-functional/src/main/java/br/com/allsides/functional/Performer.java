@@ -1,4 +1,4 @@
-package br.com.allsides.funcional;
+package br.com.allsides.functional;
 
 public interface Performer extends Runnable {
 

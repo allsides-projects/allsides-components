@@ -1,12 +1,10 @@
-package br.com.allsides.funcional;
+package br.com.allsides.functional;
 
 import java.util.function.Consumer;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ObserverTest {
 
