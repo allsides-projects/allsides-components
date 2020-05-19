@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>br.com.allsides</groupId>
+    <artifactId>allsides-dependencies</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../allsides-dependencies</relativePath>
+  </parent>
+
+  <groupId>br.com.allsides</groupId>
+  <artifactId>allsides-components</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>allsides-components</name>
+  <modules>
+    <module>allsides-functional</module>
+  </modules>
+</project>
