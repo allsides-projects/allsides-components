@@ -1,5 +1,7 @@
-package br.com.allsides.functional;
+package api.test.functional;
 
+import br.com.allsides.functional.Exchanger;
+import br.com.allsides.functional.Mapper;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

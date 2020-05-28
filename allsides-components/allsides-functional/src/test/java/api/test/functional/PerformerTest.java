@@ -1,5 +1,6 @@
-package br.com.allsides.functional;
+package api.test.functional;
 
+import br.com.allsides.functional.Performer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,6 +15,15 @@ class PerformerTest {
         });
         runnable.run();
         assertTrue(delegates[0]);
+    }
+    
+    @Test
+    void throwRuntimeException() {
+        Runnable runnable = Performer.newRunnable(() -> {
+            throw new IllegalArgumentException("an error");
+        });
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> runnable.run());
+        assertEquals("an error", exception.getMessage());
     }
 
     @Test

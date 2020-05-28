@@ -8,6 +8,8 @@ public interface Performer extends Runnable {
     default void run() {
         try {
             this.perform();
+        } catch (RuntimeException e) {
+            throw e;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -10,6 +10,8 @@ public interface Observer<T> extends Consumer<T> {
     default void accept(T t) {
         try {
             this.observe(t);
+        } catch (RuntimeException e) {
+            throw e;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

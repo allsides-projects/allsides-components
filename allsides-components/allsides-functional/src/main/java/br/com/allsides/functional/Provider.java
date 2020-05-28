@@ -10,7 +10,9 @@ public interface Provider<T> extends Supplier<T> {
     default T get() {
         try {
             return this.provide();
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
+            throw e;
+        }  catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

@@ -10,6 +10,8 @@ public interface Mapper<T, R> extends Function<T, R> {
     default R apply(T t) {
         try {
             return this.map(t);
+        } catch (RuntimeException e) {
+            throw e;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

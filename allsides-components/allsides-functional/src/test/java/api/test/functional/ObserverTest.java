@@ -1,7 +1,8 @@
-package br.com.allsides.functional;
+package api.test.functional;
 
 import java.util.function.Consumer;
 
+import br.com.allsides.functional.Observer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +17,15 @@ class ObserverTest {
         });
         consumer.accept("anything");
         assertTrue(delegates[0]);
+    }
+    
+    @Test
+    void throwRuntimeException() {
+        Consumer<String> consumer = Observer.newConsumer(texto -> {
+            throw new IllegalArgumentException(texto);
+        });
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> consumer.accept("an error"));
+        assertEquals("an error", exception.getMessage());
     }
 
     @Test

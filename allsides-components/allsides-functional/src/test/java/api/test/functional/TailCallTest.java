@@ -1,5 +1,6 @@
-package br.com.allsides.functional;
+package api.test.functional;
 
+import br.com.allsides.functional.TailCall;
 import org.junit.jupiter.api.Test;
 
 import static br.com.allsides.functional.TailCall.*;
