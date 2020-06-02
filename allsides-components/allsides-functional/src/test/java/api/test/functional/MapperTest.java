@@ -23,6 +23,14 @@ class MapperTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> function.apply(21));
         assertEquals("an error", exception.getMessage());
     }
+    
+    @Test
+    void aggregate() throws Exception {
+        Mapper<Integer, Integer> power = x -> x * x;
+        Mapper<Integer, String> powerAggregate = power.aggregate((arg, returnedValue) -> returnedValue.map(powered -> arg + ":" + powered));
+        String result = powerAggregate.map(3);
+        assertEquals("3:9", result);
+    }
 
     @Test
     void converExceptionToRuntimeException() {
